@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.biografia{
+    background-image: url(https://pbs.twimg.com/media/EMLiruhUUAAWsMq.png);
+    background-size: cover;
+}
+.contactanos{
+    background-image: url(../Imagenes/castlerock-allanwake-browsergame-3d-background-2.jpg);
+    background-size: cover;
+}
+.home{
+    background-image: url(../Imagenes/202-2020262_stephen-king-quote-we-make-up.jpg);
+    background-size: cover;
+}
+.torreOscura{
+    background-image: url(https://cloudfront-us-east-1.images.arcpublishing.com/culturacolectiva/R52N4PMOT5FV5CHOCBF73O4JVU.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.nombre{
+    font-family: 'Rubik Wet Paint', cursive;
+    border: solid 5px;
+    color: whitesmoke;
+    letter-spacing: 5px;
+    word-spacing: 3px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    grid-area: nombre;
+}
+.titulo{
+    margin: 30px;
+    padding: 30px;
+    border: double 5px rgb(2, 5, 22);
+    color: whitesmoke;
+    font-family: 'Special Elite', cursive;
+    font-style: italic;
+    grid-area: titulo ;
+}
+nav{
+    margin: 30px;
+    padding: 5px;
+
+}
+.navegador{
+    list-style: none;
+    font-family: 'Special Elite', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-area: nav;
+}
+ul li{
+    display: inline-block; 
+    text-align: center;
+}
+a{
+    color: whitesmoke;
+    text-decoration: none; 
+}
+.mainTorreOscura{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: 
+    "titulo titulo"
+    "parrafoTorreOscura parrafoTorreOscura"
+    "videoTorreOscura1 listaTorreOscura"
+    "videoTorreOscura2 listaTorreOscura"
+    ;
+}
+
+.parrafoTorreOscura{
+    font-family: 'Special Elite', cursive;
+    font-style: italic;
+    line-height: 1.5; 
+    margin: 40px;
+    grid-area: parrafoTorreOscura;
+}
+.videoTorreOscura1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    grid-area: videoTorreOscura1;
+	padding: 0 20px;
+}
+.videoTorreOscura2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    grid-area: videoTorreOscura2;
+	padding: 0 20px;
+}
+
+.videoTorreOscura1 iframe{
+    width:100%;
+    
+} 
+.videoTorreOscura2 iframe {
+    width:100%;
+}
+
+.tituloDeListaTorreOscura{
+    font-family: 'Special Elite', cursive;
+    right: 90px;
+    top: 550px;
+}
+.listaTorreOscura{
+    right: 1px;
+    top: 45px;
+    font-family: 'Special Elite', cursive;
+    line-height: 50px;
+    word-spacing: 1.6px;
+    border-left: solid;
+    max-width: 600px;
+    height: 600px;
+    overflow:auto;
+    padding-left: 50px;
+    grid-area: listaTorreOscura;
+    
+}
+section{
+    width: 800px;
+    height: 700px;
+    overflow: auto;
+    margin-bottom: 70px;
+}
+.parrafo1Biografia{
+	width:auto;
+    margin: 10px;
+    padding: 50px;
+    color: whitesmoke;
+    font-family: 'Special Elite', cursive;
+    font-style: italic;
+    line-height: 1.5;
+    grid-area: parrafoBiografia;
+}
+.mainBiografia{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "titulo titulo"
+    "parrafoBiografia videoBiografia";
+    grid-area: mainBiografia;
+    }
+.videoBiografia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: videoBiografia;
+	padding: 0 20px;
+
+}
+.videoBiografia iframe {
+	width:100%;
+	height: 400px;
+}
+footer{
+    background-color: beige;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    grid-area: footer;
+}
+.pieContactanos{
+    background-color: beige;
+    text-align: right;
+    position: relative;
+    top: 260px;
+}
+fieldset{
+    color: black;
+    font-family: 'Special Elite', cursive;
+    height: 670px;
+    width: 450px;
+    margin-top: 250px;
+    border-left: white solid;
+    border-bottom: white solid;
+    border-right: white solid;
+    position: absolute;
+    top: 20px;
+    left: 950px;
+}
+form{
+    margin-top: 50px;
+    color: black;
+    font-family: 'Special Elite', cursive;
+    line-height: 25px;
+    width: 350px;
+    height: 400px;
+    position: relative;
+    top: 20px;
+    left: 1000px;
+}
+@media screen and (max-width:680px){
+    .mainTorreOscura{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "titulo"
+    "parrafoTorreOscura"
+    "videoTorreOscura1"
+    "videoTorreOscura2"
+    "listaTorreOscura";    
+    }
+    .listaTorreOscura{
+        overflow: hidden;
+        height: auto;
+    }
+    .videoTorreOscura1{
+        height:auto;
+        margin: 0;
+        padding: 50px;
+    }
+    .videoTorreOscura2{
+        height:auto;
+        margin: 0;
+        padding: 50px;
+    }
+    footer {
+        justify-content: space-around;    
+    }
+    .navegador{
+        flex-direction: column;
+    
+    }
+    .parrafo1Biografia{
+        display: none;
+    }
+
+    .videoBiografia{
+        width: 100%; 
+        height:auto;
+        margin: auto;
+        padding: 50px;
+    }
+    .mainBiografia{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+        "titulo"
+        "videoBiografia";
+        }
+    
+	.torreOscura {
+		background-attachment: fixed;
+	}
+    
+}
