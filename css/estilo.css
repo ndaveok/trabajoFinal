@@ -10,12 +10,12 @@
 .contactanos{
     background-image: url(../Imagenes/castlerock-allanwake-browsergame-3d-background-2.jpg);
     background-size: cover;
-    background-attachment: fixed;
+
 }
 .home{
     background-image: url(../Imagenes/202-2020262_stephen-king-quote-we-make-up.jpg);
     background-size: cover;
-    background-attachment: fixed
+    background-attachment: fixed;
 }
 .torreOscura{
     background-image: url(https://cloudfront-us-east-1.images.arcpublishing.com/culturacolectiva/R52N4PMOT5FV5CHOCBF73O4JVU.jpg);
@@ -50,33 +50,12 @@
     font-style: italic;
     grid-area: titulo ;
 }
-nav{
-    margin: 30px;
-    padding: 5px;
 
-}
-.navegador{
-    list-style: none;
+.navbar-nav{
     font-family: 'Special Elite', cursive;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    grid-area: nav;
 }
-.navegador li a{
+.navbar-nav li a{
     text-decoration: none;
-}
-.navegador :hover{
-    color: red;
-    transform: scale(1.2, 1.2);
-}
-ul li{
-    display: inline-block; 
-    text-align: center;
-}
-a{
-    color: whitesmoke;
-    text-decoration: none; 
 }
 .mainTorreOscura{
     display: grid;
@@ -240,10 +219,6 @@ form{
     }
     footer {
         justify-content: space-around;    
-    }
-    .navegador{
-        flex-direction: column;
-    
     }
     .parrafo1Biografia{
         display: none;

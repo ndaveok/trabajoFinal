@@ -9,23 +9,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="icon" href="../Imagenes/favicon-32x32.png">
     <link rel="stylesheet" href="../css/estilo.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!--Link a AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Nombre de la pagina 🧛‍♂️</title>
 </head>
 <body class="biografia">
     <header>
-        <h1 class="nombre">Nombre de la pagina</h1>
-        <nav>
-            <ul class="navegador">
-                <li> <a href="../index.html">Home</a></li>
-                <li> <a href="../Pages/biografia.html">Biografia</a></li>
-                <li> <a href="#">Bibliografia</a></li>
-                <li> <a href="../Pages/torreOscura.htm">Camino hacia la torre oscura</a></li>
-                <li> <a href="#">Peliculas</a></li>
-                <li> <a href="../Pages/contactanos.html">Contactanos</a></li>
-            </ul> 
-        </nav>
+        <nav class="navbar navbar-expand-lg ">
+            <div><h1 class="nombre"> Nombre de la pagina </h1></div>
+            <div class="container-fluid">
+              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="./Pages/biografia.html">Biografia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Bibliografia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="./Pages/torreOscura.htm">Camino hacia la torre oscura</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Peliculas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="./Pages/contactanos.html">Contactanos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        
     </header>
     <main class="mainBiografia">
         <div class="titulo">
@@ -50,6 +72,8 @@
     <script>
         AOS.init();
     </script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     
 </body>
 </html>
