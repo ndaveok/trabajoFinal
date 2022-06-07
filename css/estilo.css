@@ -10,6 +10,7 @@
 .contactanos{
     background-image: url(../Imagenes/castlerock-allanwake-browsergame-3d-background-2.jpg);
     background-size: cover;
+    background-attachment: fixed;
 
 }
 .home{
@@ -156,14 +157,14 @@ section{
 	height: 400px;
 }
 footer{
-    background-color: beige;
+    background-color: white;
     display: flex;
     justify-content: end;
     align-items: center;
     grid-area: footer;
 }
 .pieContactanos{
-    background-color: beige;
+    background-color: white;
     text-align: right;
     position: relative;
     top: 260px;
@@ -240,11 +241,11 @@ form{
     
 	.torreOscura {
 		background-attachment: fixed;
-	}
-    .contactanos{
-        background-attachment: fixed;
+	
     }
     .home{
         background-attachment: fixed;
     }
+
+
 }
