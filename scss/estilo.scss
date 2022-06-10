@@ -1,5 +1,63 @@
+$colorLetra:rgba(219, 213, 237, 0.666);
+@import "keyframe";
 .bibliografia{
-    background-image: url(../Imagenes/Stephen-King-twitter-ok.webp);
+    background-image: url(../Imagenes/Laeacco.jpg);
     background-size: cover;
     background-attachment: fixed;
+    header{
+        .nombre{
+            font-family: 'Rubik Wet Paint', cursive;
+            color: whitesmoke;
+            letter-spacing: 5px;
+            word-spacing: 3px;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            animation: aparecerAlt 7s infinite;
+        }
+        .container-fluid{
+            div{
+                .navbar-nav{
+                    font-family: 'Special Elite', cursive;
+                    li{
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main{
+        .titulo{
+            margin: 30px;
+            padding: 30px;
+            color: $colorLetra;
+            font-family: 'Special Elite', cursive;
+            font-style: italic;
+        }
+        .parrafoIntro{
+            font-family: 'Special Elite', cursive;
+            color:$colorLetra;
+            font-style: italic;
+            line-height: 1.5; 
+            margin: 40px;
+        }
+        div{
+            ul{
+                li{
+                    font-family: 'Special Elite', cursive;
+                    font-style: italic;
+                    color: $colorLetra;
+                    line-height: 1.5; 
+                }
+            }
+        }
+    }
+    footer{
+        background-color: beige;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
 }
