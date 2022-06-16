@@ -1,31 +1,59 @@
+$fondoTorreOscura: url(https://cloudfront-us-east-1.images.arcpublishing.com/culturacolectiva/R52N4PMOT5FV5CHOCBF73O4JVU.jpg);
+$fondoBibliografia: url(../Imagenes/Laeacco.jpg);
 $colorLetra:rgba(219, 213, 237, 0.666);
 @import "keyframe";
-.bibliografia{
-    background-image: url(../Imagenes/Laeacco.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    header{
-        .nombre{
-            font-family: 'Rubik Wet Paint', cursive;
-            color: whitesmoke;
-            letter-spacing: 5px;
-            word-spacing: 3px;
-            margin: 5px;
-            padding: 10px;
-            text-align: center;
-            animation: aparecerAlt 7s infinite;
-        }
-        .container-fluid{
-            div{
-                .navbar-nav{
-                    font-family: 'Special Elite', cursive;
-                    li{
-                        a{
-                            text-decoration: none;
-                        }
-                    }
+
+.nombre{
+    font-family: 'Rubik Wet Paint', cursive;
+    color: whitesmoke;
+    letter-spacing: 5px;
+    word-spacing: 3px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    animation: aparecerAlt 7s infinite;
+}
+.videoTorreOscura1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    grid-area: videoTorreOscura1;
+    padding: 0 20px;
+    iframe{
+        width: 100%;
+    }
+}
+.container-fluid{
+    div{
+        .navbar-nav{
+            font-family: 'Special Elite', cursive;
+            li{
+                a{
+                    text-decoration: none;
                 }
             }
+        }
+    }
+}
+footer{
+    background-color: beige;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+@mixin fondo($bgfondo){
+    background-image: $bgfondo;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bibliografia{
+    @include fondo ($fondoBibliografia);
+    header{
+        .nombre{
+            @extend .nombre;
+        }
+        .container-fluid{
+            @extend .container-fluid;
         }
     }
     main{
@@ -55,9 +83,71 @@ $colorLetra:rgba(219, 213, 237, 0.666);
         }
     }
     footer{
-        background-color: beige;
-        display: flex;
-        justify-content: end;
-        align-items: center;
+        @extend footer;
+    }
+}
+.torreOscura{
+    @include fondo ($fondoTorreOscura);
+    header {
+        .nombre{
+            @extend .nombre;
+        }
+        .container-fluid{
+            @extend .container-fluid;
+        }
+    }
+    .mainTorreOscura{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: 
+        "titulo titulo"
+        "parrafoTorreOscura parrafoTorreOscura"
+        "videoTorreOscura1 listaTorreOscura"
+        "videoTorreOscura2 listaTorreOscura"
+        ;
+        .titulo{
+            margin: 30px;
+            padding: 30px;
+            color: whitesmoke;
+            font-family: 'Special Elite', cursive;
+            font-style: italic;
+        }
+        .parrafoTorreOscura{
+            font-family: 'Special Elite', cursive;
+            font-style: italic;
+            line-height: 1.5; 
+            margin: 40px;
+            grid-area: parrafoTorreOscura;
+        }
+        .videoTorreOscura1{
+            @extend .videoTorreOscura1;
+        }
+        .listaTorreOscura{
+            right: 1px;
+            top: 45px;
+            font-family: 'Special Elite', cursive;
+            line-height: 50px;
+            word-spacing: 1.6px;
+            border-left: solid;
+            max-width: 600px;
+            height: 600px;
+            overflow:auto;
+            padding-left: 50px;
+            grid-area: listaTorreOscura;
+            .tituloListaTorreOscura{
+                font-family: 'Special Elite', cursive;
+                right: 90px;
+                top: 550px;
+            }
+        }
+        .videoTorreOscura2{
+            @extend .videoTorreOscura1;
+            grid-area: videoTorreOscura2;
+
+        }
+    }
+    footer{
+        @extend footer;
     }
 }
