@@ -220,25 +220,32 @@ footer{
                     margin: 40px;
             }
             .trailerPeliculas{
-                margin: 30px;
+                iframe{
+                    margin: 30px;
+                    width:560px;
+                    height:315px;
+                }
             }
+            @media screen and (max-width:$smartphone){
+                .trailerPeliculas{
+                    iframe{
+                        width: 100%;
+                        margin: 0;
+                        padding: 50px;
+                    }
+                }
             .trailerPeliculait{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
             }
+            @media screen and (max-width:$smartphone) {
+                .trailerPeliculait {
+                    flex-direction:column; }
+                
+            }
         }
     }
-    @media screen and (max-width:$smartphone){
-        .trailerPeliculas{
-            width: 100%;
-            height:auto;
-            margin: auto;
-            padding: 50px; 
-        }
-        @media screen and (max-width:$smartphone){
-            display: block;
-        }
     }
     footer{
         @extend footer;

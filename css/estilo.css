@@ -137,22 +137,23 @@ footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home 
     line-height: 1.5;
     width: 50%;
     margin: 40px; }
-  .bodyPeliculas main .peliculas .trailerPeliculas {
-    margin: 30px; }
-  .bodyPeliculas main .peliculas .trailerPeliculait {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; }
+  .bodyPeliculas main .peliculas .trailerPeliculas iframe {
+    margin: 30px;
+    width: 560px;
+    height: 315px; }
   @media screen and (max-width: 768px) {
-    .bodyPeliculas .trailerPeliculas {
+    .bodyPeliculas main .peliculas .trailerPeliculas iframe {
       width: 100%;
-      height: auto;
-      margin: auto;
-      padding: 50px; } }
+      margin: 0;
+      padding: 50px; }
+    .bodyPeliculas main .peliculas .trailerPeliculait {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly; } }
 
 @media screen and (max-width: 768px) and (max-width: 768px) {
-  .bodyPeliculas {
-    display: block; } }
+  .bodyPeliculas main .peliculas .trailerPeliculait {
+    flex-direction: column; } }
 
 .biografia {
   background-image: url(../Imagenes/hotelOverlook.png);
