@@ -1,8 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 @keyframes aparecerAlt {
   0% {
     opacity: 0; }
@@ -13,7 +8,7 @@
   100% {
     opacity: 0; } }
 
-.nombre, .bibliografia header .nombre, .torreOscura header .nombre {
+.nombre, .bibliografia header .nombre, .torreOscura header .nombre, .bodyPeliculas header .nombre, .biografia header .nombre, .home header .nombre {
   font-family: 'Rubik Wet Paint', cursive;
   color: whitesmoke;
   letter-spacing: 5px;
@@ -22,6 +17,13 @@
   padding: 10px;
   text-align: center;
   animation: aparecerAlt 7s infinite; }
+
+.titulo, .bibliografia main .titulo, .torreOscura .mainTorreOscura .titulo, .bodyPeliculas main .titulo, .biografia .mainBiografia .titulo {
+  margin: 30px;
+  padding: 30px;
+  color: rgba(219, 213, 237, 0.666);
+  font-family: 'Special Elite', cursive;
+  font-style: italic; }
 
 .videoTorreOscura1, .torreOscura .mainTorreOscura .videoTorreOscura1, .torreOscura .mainTorreOscura .videoTorreOscura2 {
   display: flex;
@@ -37,22 +39,20 @@
   .container-fluid div .navbar-nav li a {
     text-decoration: none; }
 
-footer, .bibliografia footer, .torreOscura footer {
+footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home footer {
   background-color: beige;
   display: flex;
   justify-content: end;
   align-items: center; }
 
+@media screen and (max-width: 768px) {
+  footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home footer {
+    justify-content: space-around; } }
+
 .bibliografia {
-  background-image: url(../Imagenes/Laeacco.jpg);
+  background-image: url(../Imagenes/bibliografia-StephenKing.jpg);
   background-size: cover;
   background-attachment: fixed; }
-  .bibliografia main .titulo {
-    margin: 30px;
-    padding: 30px;
-    color: rgba(219, 213, 237, 0.666);
-    font-family: 'Special Elite', cursive;
-    font-style: italic; }
   .bibliografia main .parrafoIntro {
     font-family: 'Special Elite', cursive;
     color: rgba(219, 213, 237, 0.666);
@@ -64,6 +64,9 @@ footer, .bibliografia footer, .torreOscura footer {
     font-style: italic;
     color: rgba(219, 213, 237, 0.666);
     line-height: 1.5; }
+  @media screen and (max-width: 768px) {
+    .bibliografia {
+      background-attachment: fixed; } }
 
 .torreOscura {
   background-image: url(https://cloudfront-us-east-1.images.arcpublishing.com/culturacolectiva/R52N4PMOT5FV5CHOCBF73O4JVU.jpg);
@@ -73,22 +76,15 @@ footer, .bibliografia footer, .torreOscura footer {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "titulo titulo"
- "parrafoTorreOscura parrafoTorreOscura"
- "videoTorreOscura1 listaTorreOscura"
- "videoTorreOscura2 listaTorreOscura"; }
-    .torreOscura .mainTorreOscura .titulo {
-      margin: 30px;
-      padding: 30px;
-      color: whitesmoke;
-      font-family: 'Special Elite', cursive;
-      font-style: italic; }
+    grid-template-areas: "titulo titulo" "parrafoTorreOscura parrafoTorreOscura" "videoTorreOscura1 listaTorreOscura" "videoTorreOscura2 listaTorreOscura"; }
     .torreOscura .mainTorreOscura .parrafoTorreOscura {
       font-family: 'Special Elite', cursive;
       font-style: italic;
       line-height: 1.5;
       margin: 40px;
       grid-area: parrafoTorreOscura; }
+    .torreOscura .mainTorreOscura .videoTorreOscura1, .torreOscura .mainTorreOscura .videoTorreOscura2 {
+      grid-area: videoTorreOscura1; }
     .torreOscura .mainTorreOscura .listaTorreOscura {
       right: 1px;
       top: 45px;
@@ -107,59 +103,99 @@ footer, .bibliografia footer, .torreOscura footer {
         top: 550px; }
     .torreOscura .mainTorreOscura .videoTorreOscura2 {
       grid-area: videoTorreOscura2; }
-      @media screen and (max-width:680px){
-        .mainTorreOscura{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
-        grid-template-areas: 
-        "titulo"
-        "parrafoTorreOscura"
-        "videoTorreOscura1"
-        "videoTorreOscura2"
-        "listaTorreOscura";    
-        }
-        .listaTorreOscura{
-            overflow: hidden;
-            height: auto;
-        }
-        .videoTorreOscura1{
-            height:auto;
-            margin: 0;
-            padding: 50px;
-        }
-        .videoTorreOscura2{
-            height:auto;
-            margin: 0;
-            padding: 50px;
-        }
-        footer {
-            justify-content: space-around;    
-        }
-        .parrafo1Biografia{
-            display: none;
-        }
-    
-        .videoBiografia{
-            width: 100%; 
-            height:auto;
-            margin: auto;
-            padding: 50px;
-        }
-        .mainBiografia{
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, auto);
-            grid-template-areas:
-            "titulo"
-            "videoBiografia";
-            }
-        
-      .torreOscura {
-        background-attachment: fixed;
-      }
-        .contactanos{
-            background-attachment: fixed;
-        }
-        .home{
-            background-attachment: fixed;
-        }
-    }
+  @media screen and (max-width: 768px) {
+    .torreOscura .mainTorreOscura {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas: "titulo" "parrafoTorreOscura" "videoTorreOscura1" "videoTorreOscura2" "listaTorreOscura"; }
+      .torreOscura .mainTorreOscura .listaTorreOscura {
+        overflow: hidden;
+        height: auto; }
+      .torreOscura .mainTorreOscura .videoTorreOscura1, .torreOscura .mainTorreOscura .videoTorreOscura2 {
+        height: auto;
+        margin: 0;
+        padding: 50px; }
+      .torreOscura .mainTorreOscura .videoTorreOscura2 {
+        height: auto;
+        margin: 0;
+        padding: 50px; } }
+
+.bodyPeliculas {
+  background-image: url(../Imagenes/creepshow-StephenKing.avif);
+  background-size: cover;
+  background-attachment: fixed; }
+  .bodyPeliculas main section {
+    font-family: 'Special Elite', cursive;
+    color: rgba(219, 213, 237, 0.666);
+    font-style: italic;
+    line-height: 1.5;
+    margin: 40px; }
+  .bodyPeliculas main .peliculas .parrafoPeliculas {
+    font-family: 'Special Elite', cursive;
+    font-style: italic;
+    color: whitesmoke;
+    line-height: 1.5;
+    width: 50%;
+    margin: 40px; }
+  .bodyPeliculas main .peliculas .trailerPeliculas {
+    margin: 30px; }
+  .bodyPeliculas main .peliculas .trailerPeliculait {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+  @media screen and (max-width: 768px) {
+    .bodyPeliculas .trailerPeliculas {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      padding: 50px; } }
+
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .bodyPeliculas {
+    display: block; } }
+
+.biografia {
+  background-image: url(../Imagenes/hotelOverlook.png);
+  background-size: cover;
+  background-attachment: fixed; }
+  .biografia .mainBiografia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "titulo titulo" "parrafoBiografia videoBiografia";
+    grid-area: mainBiografia; }
+    .biografia .mainBiografia .parrafo1Biografia {
+      width: auto;
+      margin: 10px;
+      padding: 50px;
+      color: whitesmoke;
+      font-family: 'Special Elite', cursive;
+      font-style: italic;
+      line-height: 1.5;
+      grid-area: parrafoBiografia; }
+    .biografia .mainBiografia .videoBiografia {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-area: videoBiografia;
+      padding: 0 20px; }
+      .biografia .mainBiografia .videoBiografia iframe {
+        width: 100%;
+        height: 400px; }
+  @media screen and (max-width: 768px) {
+    .biografia .mainBiografia {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "titulo" "videoBiografia"; }
+    .biografia .parrafo1Biografia {
+      display: none; }
+    .biografia .videoBiografia {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      padding: 50px; } }
+
+.home {
+  background-image: url(../Imagenes/stephenKing-Presenta.jpg);
+  background-size: cover;
+  background-attachment: fixed; }

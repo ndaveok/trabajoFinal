@@ -1,5 +1,9 @@
 $fondoTorreOscura: url(https://cloudfront-us-east-1.images.arcpublishing.com/culturacolectiva/R52N4PMOT5FV5CHOCBF73O4JVU.jpg);
-$fondoBibliografia: url(../Imagenes/Laeacco.jpg);
+$fondoBibliografia: url(../Imagenes/bibliografia-StephenKing.jpg);
+$fondoPeliculas: url(../Imagenes/creepshow-StephenKing.avif);
+$fondoBiografia: url(../Imagenes/hotelOverlook.png);
+$fondoHome:url(../Imagenes/stephenKing-Presenta.jpg);
+$smartphone: 768px;
 $colorLetra:rgba(219, 213, 237, 0.666);
 @import "keyframe";
 
@@ -12,6 +16,13 @@ $colorLetra:rgba(219, 213, 237, 0.666);
     padding: 10px;
     text-align: center;
     animation: aparecerAlt 7s infinite;
+}
+.titulo{    
+    margin: 30px;
+    padding: 30px;
+    color: $colorLetra;
+    font-family: 'Special Elite', cursive;
+    font-style: italic;
 }
 .videoTorreOscura1{
     display: flex;
@@ -41,6 +52,11 @@ footer{
     justify-content: end;
     align-items: center;
 }
+@media screen and (max-width:$smartphone){
+    footer {
+        justify-content: space-around;    
+    }
+}
 @mixin fondo($bgfondo){
     background-image: $bgfondo;
     background-size: cover;
@@ -58,11 +74,7 @@ footer{
     }
     main{
         .titulo{
-            margin: 30px;
-            padding: 30px;
-            color: $colorLetra;
-            font-family: 'Special Elite', cursive;
-            font-style: italic;
+            @extend .titulo;
         }
         .parrafoIntro{
             font-family: 'Special Elite', cursive;
@@ -85,6 +97,9 @@ footer{
     footer{
         @extend footer;
     }
+@media screen and ( max-width:$smartphone) {
+    background-attachment: fixed;
+}
 }
 .torreOscura{
     @include fondo ($fondoTorreOscura);
@@ -107,11 +122,7 @@ footer{
         "videoTorreOscura2 listaTorreOscura"
         ;
         .titulo{
-            margin: 30px;
-            padding: 30px;
-            color: whitesmoke;
-            font-family: 'Special Elite', cursive;
-            font-style: italic;
+            @extend .titulo;
         }
         .parrafoTorreOscura{
             font-family: 'Special Elite', cursive;
@@ -122,6 +133,7 @@ footer{
         }
         .videoTorreOscura1{
             @extend .videoTorreOscura1;
+            grid-area: videoTorreOscura1;
         }
         .listaTorreOscura{
             right: 1px;
@@ -144,7 +156,164 @@ footer{
         .videoTorreOscura2{
             @extend .videoTorreOscura1;
             grid-area: videoTorreOscura2;
-
+        }
+    }
+    @media screen and (max-width:$smartphone){
+        .mainTorreOscura{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, auto);
+            grid-template-areas: 
+            "titulo"
+            "parrafoTorreOscura"
+            "videoTorreOscura1"
+            "videoTorreOscura2"
+            "listaTorreOscura"
+            ;    
+            .listaTorreOscura{
+                overflow: hidden;
+                height: auto;
+            }
+            .videoTorreOscura1{
+                height:auto;
+                margin: 0;
+                padding: 50px;
+            }
+            .videoTorreOscura2{
+                height:auto;
+                margin: 0;
+                padding: 50px;
+            }
+        }
+    }
+    footer{
+        @extend footer;
+    }
+}
+.bodyPeliculas{
+    @include fondo ($fondoPeliculas);
+    header {
+        .nombre{
+            @extend .nombre;
+        }
+        .container-fluid{
+            @extend .container-fluid;
+        }
+    }
+    main{
+        .titulo{
+            @extend .titulo;
+        }
+        section{
+            font-family: 'Special Elite', cursive;
+            color:$colorLetra;
+            font-style: italic;
+            line-height: 1.5; 
+            margin: 40px;
+        }
+        .peliculas{
+            .parrafoPeliculas{
+                    font-family: 'Special Elite', cursive;
+                    font-style: italic;
+                    color: whitesmoke;
+                    line-height: 1.5;
+                    width: 50%;
+                    margin: 40px;
+            }
+            .trailerPeliculas{
+                margin: 30px;
+            }
+            .trailerPeliculait{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
+    }
+    @media screen and (max-width:$smartphone){
+        .trailerPeliculas{
+            width: 100%;
+            height:auto;
+            margin: auto;
+            padding: 50px; 
+        }
+        @media screen and (max-width:$smartphone){
+            display: block;
+        }
+    }
+    footer{
+        @extend footer;
+    }
+}
+.biografia{
+    @include fondo ($fondoBiografia);
+    header {
+        .nombre{
+            @extend .nombre;
+        }
+        .container-fluid{
+            @extend .container-fluid;
+        }
+    }
+    .mainBiografia{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+        "titulo titulo"
+        "parrafoBiografia videoBiografia";
+        grid-area: mainBiografia;
+        .titulo{
+            @extend .titulo;
+        }
+        .parrafo1Biografia{
+                width:auto;
+                margin: 10px;
+                padding: 50px;
+                color: whitesmoke;
+                font-family: 'Special Elite', cursive;
+                font-style: italic;
+                line-height: 1.5;
+                grid-area: parrafoBiografia;
+        }
+        .videoBiografia{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-area: videoBiografia;
+            padding: 0 20px;
+            iframe{
+                width:100%;
+                height: 400px;
+            }
+        }
+    }
+    @media screen and (max-width:$smartphone){
+        .mainBiografia{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas:
+            "titulo"
+            "videoBiografia";
+            }
+        .parrafo1Biografia{
+            display: none;
+        }
+        .videoBiografia{
+            width: 100%;
+            height:auto;
+            margin: auto;
+            padding: 50px; 
+        }
+    }
+}
+.home{
+    @include fondo ($fondoHome);
+    header {
+        .nombre{
+            @extend .nombre;
+        }
+        .container-fluid{
+            @extend .container-fluid;
         }
     }
     footer{

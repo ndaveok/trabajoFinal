@@ -7,13 +7,18 @@
     background-image: url(https://pbs.twimg.com/media/EMLiruhUUAAWsMq.png);
     background-size: cover;
 }
+.peliculas{
+    background-image: url(../Imagenes/56c5cc1d73ab8ca2_masthead.avif);
+    background-size: cover;
+    background-attachment: fixed;
+}
 .contactanos{
     background-image: url(../Imagenes/castlerock-allanwake-browsergame-3d-background-2.jpg);
     background-size: cover;
 
 }
 .home{
-    background-image: url(../Imagenes/202-2020262_stephen-king-quote-we-make-up.jpg);
+    background-image: url(../Imagenes/stephenKing-Presenta.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -168,30 +173,7 @@ footer{
     position: relative;
     top: 260px;
 }
-fieldset{
-    color: black;
-    font-family: 'Special Elite', cursive;
-    height: 670px;
-    width: 450px;
-    margin-top: 250px;
-    border-left: white solid;
-    border-bottom: white solid;
-    border-right: white solid;
-    position: absolute;
-    top: 20px;
-    left: 950px;
-}
-form{
-    margin-top: 50px;
-    color: black;
-    font-family: 'Special Elite', cursive;
-    line-height: 25px;
-    width: 350px;
-    height: 400px;
-    position: relative;
-    top: 20px;
-    left: 1000px;
-}
+
 @media screen and (max-width:680px){
     .mainTorreOscura{
     grid-template-columns: 1fr;
