@@ -227,22 +227,29 @@ footer{
                 }
             }
             @media screen and (max-width:$smartphone){
-                .trailerPeliculas{
+            .trailerPeliculas{
+                iframe{
+                    width: 100%;
+                    margin: 0;
+                    padding: 50px;
+                }
+            }
+            .trailerPeliculait{
+                iframe {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                }
+            }
+            @media screen and (max-width:$smartphone) {
+                .trailerPeliculait {
                     iframe{
                         width: 100%;
                         margin: 0;
                         padding: 50px;
+                        flex-direction:column; 
                     }
                 }
-            .trailerPeliculait{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-            }
-            @media screen and (max-width:$smartphone) {
-                .trailerPeliculait {
-                    flex-direction:column; }
-                
             }
         }
     }

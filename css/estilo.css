@@ -146,13 +146,16 @@ footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home 
       width: 100%;
       margin: 0;
       padding: 50px; }
-    .bodyPeliculas main .peliculas .trailerPeliculait {
+    .bodyPeliculas main .peliculas .trailerPeliculait iframe {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly; } }
 
 @media screen and (max-width: 768px) and (max-width: 768px) {
-  .bodyPeliculas main .peliculas .trailerPeliculait {
+  .bodyPeliculas main .peliculas .trailerPeliculait iframe {
+    width: 100%;
+    margin: 0;
+    padding: 50px;
     flex-direction: column; } }
 
 .biografia {
