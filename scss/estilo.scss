@@ -227,6 +227,15 @@ footer{
                     height:315px;
                 }
             }
+            .itTrailer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                iframe {
+                    width:560px;
+                    height:315px;
+                }
+            }
             @media screen and (max-width:$smartphone){
             .trailerPeliculas{
                 iframe{
@@ -235,15 +244,8 @@ footer{
                     padding: 50px;
                 }
             }
-            .trailerPeliculait{
-                iframe {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                }
-            }
             @media screen and (max-width:$smartphone) {
-                .trailerPeliculait {
+                .itTrailer {
                     iframe{
                         width: 100%;
                         margin: 0;
