@@ -8,7 +8,7 @@
   100% {
     opacity: 0; } }
 
-.nombre, .bibliografia header .nombre, .torreOscura header .nombre, .bodyPeliculas header .nombre, .biografia header .nombre, .home header .nombre {
+.nombre, .bibliografia header .nombre, .torreOscura header .nombre, .bodyPeliculas header .nombre, .biografia header .nombre, .home header .nombre, .contacto header .nombre {
   font-family: 'Rubik Wet Paint', cursive;
   color: whitesmoke;
   letter-spacing: 5px;
@@ -39,14 +39,14 @@
   .container-fluid div .navbar-nav li a {
     text-decoration: none; }
 
-footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home footer {
+footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home footer, .contacto footer {
   background-color: beige;
   display: flex;
   justify-content: end;
   align-items: center; }
 
 @media screen and (max-width: 768px) {
-  footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home footer {
+  footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home footer, .contacto footer {
     justify-content: space-around; } }
 
 .bibliografia {
@@ -201,5 +201,10 @@ footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home 
 
 .home {
   background-image: url(../Imagenes/stephenKing-Presenta.jpg);
+  background-size: cover;
+  background-attachment: fixed; }
+
+.contacto {
+  background-image: url(../Imagenes/castlerock-allanwake-browsergame-3d-background-2.jpg);
   background-size: cover;
   background-attachment: fixed; }

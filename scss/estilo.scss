@@ -2,6 +2,7 @@ $fondoTorreOscura: url(https://cloudfront-us-east-1.images.arcpublishing.com/cul
 $fondoBibliografia: url(../Imagenes/bibliografia-StephenKing.jpg);
 $fondoPeliculas: url(../Imagenes/creepshow-StephenKing.avif);
 $fondoBiografia: url(../Imagenes/hotelOverlook.png);
+$fondoContacto: url(../Imagenes/castlerock-allanwake-browsergame-3d-background-2.jpg);
 $fondoHome:url(../Imagenes/stephenKing-Presenta.jpg);
 $smartphone: 768px;
 $colorLetra:rgba(219, 213, 237, 0.666);
@@ -330,6 +331,20 @@ footer{
             @extend .container-fluid;
         }
     }
+    footer{
+        @extend footer;
+    }
+}
+.contacto{
+    @include fondo ($fondoContacto);
+    header {
+        .nombre{
+            @extend .nombre;
+        }
+    }
+        .container-fluid{
+            @extend .container-fluid;
+        }
     footer{
         @extend footer;
     }
