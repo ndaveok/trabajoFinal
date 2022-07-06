@@ -50,7 +50,7 @@ footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home 
     justify-content: space-around; } }
 
 .bibliografia {
-  background-image: url(../Imagenes/bibliografia-StephenKing.jpg);
+  background-image: url(../Imagenes/biblioteca.jpg);
   background-size: cover;
   background-attachment: fixed; }
   .bibliografia main .parrafoIntro {
@@ -121,7 +121,7 @@ footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home 
         padding: 50px; } }
 
 .bodyPeliculas {
-  background-image: url(../Imagenes/creepshow-StephenKing.avif);
+  background-image: url(../Imagenes/stephen-king.png);
   background-size: cover;
   background-attachment: fixed; }
   .bodyPeliculas main section {
@@ -141,18 +141,21 @@ footer, .bibliografia footer, .torreOscura footer, .bodyPeliculas footer, .home 
     margin: 30px;
     width: 560px;
     height: 315px; }
+  .bodyPeliculas main .peliculas .itTrailer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+    .bodyPeliculas main .peliculas .itTrailer iframe {
+      width: 560px;
+      height: 315px; }
   @media screen and (max-width: 768px) {
     .bodyPeliculas main .peliculas .trailerPeliculas iframe {
       width: 100%;
       margin: 0;
-      padding: 50px; }
-    .bodyPeliculas main .peliculas .trailerPeliculait iframe {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly; } }
+      padding: 50px; } }
 
 @media screen and (max-width: 768px) and (max-width: 768px) {
-  .bodyPeliculas main .peliculas .trailerPeliculait iframe {
+  .bodyPeliculas main .peliculas .itTrailer iframe {
     width: 100%;
     margin: 0;
     padding: 50px;
